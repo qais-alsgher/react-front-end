@@ -5,9 +5,9 @@ import App from "../App";
 
 test('can change name', async () => {
     render(<App />);
-    const input = screen.getByTestId('parson-name');
+    const inputName = screen.getByTestId('parson-name');
     const name = screen.getByTestId('name');
-    fireEvent.change(input, { target: { value: 'qais' } });
+    fireEvent.change(inputName, { target: { value: 'Qais' } });
     expect(name).toHaveTextContent('My Name Is Qais');
 
 });
@@ -17,7 +17,7 @@ test('change age', () => {
     const ageInput = screen.getByTestId('parson-age');
     const age = screen.getByTestId('age');
     fireEvent.change(ageInput, { target: { value: '22' } });
-    expect(age).toHaveTextContent('I am 27 Years Old');
+    expect(age).toHaveTextContent('I am 22 Years Old');
 
 });
 
